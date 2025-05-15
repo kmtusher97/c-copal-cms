@@ -6,9 +6,9 @@ export default function SupportedLLMProvidersSection() {
         C*Opal is flexible and supports integration with multiple large language model providers:
       </p>
       <ul className="list-none p-0 flex flex-wrap justify-center gap-6 text-lg text-gray-800">
-        <li className="bg-white px-6 py-3 rounded-full shadow-sm">OpenAI</li>
+        <li className="bg-white px-6 py-3 rounded-full shadow-sm">VertexAI</li>{/* Moved */}
         <li className="bg-white px-6 py-3 rounded-full shadow-sm">Gemini</li>
-        <li className="bg-white px-6 py-3 rounded-full shadow-sm">VertexAI</li>
+        <li className="bg-white px-6 py-3 rounded-full shadow-sm">OpenAI</li>{/* Moved */}
         <li className="bg-white px-6 py-3 rounded-full shadow-sm">Ollama</li>
       </ul>
     </section>
