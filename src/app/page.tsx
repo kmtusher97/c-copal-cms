@@ -20,16 +20,16 @@ export default function Home() {
       <HeroSection />
       <WhatIsCopalSection />
       <HowItWorksSection />
-      <UsageSection /> {/* Added */}
+      <UsageSection />
       <KeyFeaturesSection />
       <SupportedLLMProvidersSection />
-      <ThreadManagementSection /> {/* Added */}
-      <ProfileManagementSection /> {/* Added */}
-      <CostTrackingSection /> {/* Added */}
+      <ThreadManagementSection />
+      <ProfileManagementSection />
+      <CostTrackingSection />
       <ExamplesUseCasesSection />
       <BenefitsSection />
       <GettingStartedSection />
-      <LocalDevelopmentSection /> {/* Added */}
+      <LocalDevelopmentSection />
       <DocumentationCommunitySection />
       <Footer />
     </main>

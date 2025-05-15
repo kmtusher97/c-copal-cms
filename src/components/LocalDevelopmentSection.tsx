@@ -1,8 +1,6 @@
-import React from 'react';
-
 export default function LocalDevelopmentSection() {
   return (
-    <section className="max-w-4xl mx-auto text-center mb-20 p-8 bg-gray-100 rounded-lg shadow-md">
+    <section id="local-development" className="max-w-4xl mx-auto text-center mb-20 p-8 bg-gray-100 rounded-lg shadow-md">
       <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Local Development</h2>
       <p className="text-lg text-gray-700 mb-6">
         If you want to contribute to Copal or run it from source, follow these steps:
@@ -110,7 +108,7 @@ export default function LocalDevelopmentSection() {
         <ol className="list-decimal list-inside ml-4">
           <li>Fork the repository</li>
           <li>Create a feature branch (<code>git checkout -b feature/amazing-feature</code>)</li>
-          <li>Commit your changes (<code>git commit -m 'Add some amazing feature'</code>)</li>
+          <li>Commit your changes (<code>git commit -m &apos;Add some amazing feature&apos;</code>)</li>
           <li>Push to the branch (<code>git push origin feature/amazing-feature</code>)</li>
           <li>Open a Pull Request</li>
         </ol>

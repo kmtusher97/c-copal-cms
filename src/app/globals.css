@@ -1,10 +1,44 @@
 @import "tailwindcss";
 
 :root {
+  /* Existing variables */
   --background: #ffffff;
   --foreground: #171717;
+
+  /* Axiom Colors - Light Mode Defaults */
+  --fg-accent: #0037FF;
+  --fg-accent-hovered: #002CCC;
+  --bg-accent: #0037FF;
+  --bg-accent-hovered: #002CCC;
+  --bg-page: #F9FAFC;
+  --bg-secondary: #F5F6FA;
+  --bg-default: #FFFFFF;
+  --fg-default: #2E3442;
+  --fg-secondary: #4F576E;
+  --border-default: #CACFDC;
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Existing variables for dark mode */
+    --background: #0a0a0a;
+    --foreground: #ededed;
+
+    /* Axiom Colors - Dark Mode */
+    --fg-accent: #6A8FFC;
+    --fg-accent-hovered: #0037FF;
+    --bg-accent: #2E66F7;
+    --bg-accent-hovered: #2E66F7;
+    --bg-page: #171A23;
+    --bg-secondary: #1C212B;
+    --bg-default: #1C2029;
+    --fg-default: #F5F6FA;
+    --fg-secondary: #CACFDC;
+    --border-default: #66708C;
+  }
+}
+
+/* This theme block seems specific, keeping existing variables for it */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -12,15 +46,9 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  /* Using Axiom page background and default foreground colors */
+  background: var(--bg-page);
+  color: var(--fg-default);
+  font-family: Arial, Helvetica, sans-serif; /* Consider using Geist fonts if available/preferred */
 }
