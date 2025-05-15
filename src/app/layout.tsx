@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Copal CLI Assistant", // Updated title
+  title: "C*Opal CLI Assistant", // Updated title
   description: "A CLI application that uses AI to process natural language commands and execute them in the terminal.", // Updated description
 };
 

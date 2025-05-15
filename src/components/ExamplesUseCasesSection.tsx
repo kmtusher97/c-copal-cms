@@ -3,7 +3,7 @@ export default function ExamplesUseCasesSection() {
     <section id="examples" className="max-w-4xl mx-auto mb-20 p-8 bg-gray-100 rounded-lg shadow-md">
       <h2 className="text-3xl md:text-4xl font-bold text-gray-900 text-center mb-6">Examples / Use Cases</h2>
       <p className="text-lg text-gray-700 mb-6">
-        See how Copal can simplify your daily tasks:
+        See how C*Opal can simplify your daily tasks:
       </p>
       <div className="text-left text-lg text-gray-700 space-y-6">
         <div>

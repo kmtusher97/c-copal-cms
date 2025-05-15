@@ -4,7 +4,7 @@ export default function AppHeader() {
   // Define key sections for primary navigation
   const sections = [
     { id: 'hero', name: 'Home' },
-    { id: 'what-is-copal', name: 'What is Copal' },
+    { id: 'what-is-copal', name: 'What is C*Opal' }, // Updated
     { id: 'how-it-works', name: 'How it Works' },
     { id: 'key-features', name: 'Features' },
     { id: 'getting-started', name: 'Get Started' },
@@ -17,7 +17,7 @@ export default function AppHeader() {
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0">
             {/* You can add your logo or site title here */}
-            <span className="text-xl font-bold text-gray-900">Copal</span>
+            <span className="text-xl font-bold text-gray-900">C*Opal</span> {/* Updated */}
           </div>
           <nav className="hidden md:block">
             <ul className="flex space-x-6">
