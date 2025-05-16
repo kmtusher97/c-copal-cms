@@ -1,0 +1,33 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main # or your default branch
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout ⚙️
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js ✅
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20' # Use a Node.js version compatible with your Next.js version
+
+      - name: Install dependencies 📦
+        run: npm install
+
+      - name: Build Next.js app 🏗️
+        run: npm run build
+
+      - name: Deploy to GitHub Pages 🚀
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./out # This is the default output directory for static exports
+          publish_branch: gh-pages
+          cname: # Add your custom domain here if you have one (e.g., example.com)
