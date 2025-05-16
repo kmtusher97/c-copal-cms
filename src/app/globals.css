@@ -16,6 +16,10 @@
   --fg-default: #2E3442;
   --fg-secondary: #4F576E;
   --border-default: #CACFDC;
+
+  /* Gradient Animation Colors - Light */
+  --gradient-start-light: #e0f2f7; /* Light blue */
+  --gradient-end-light: #eef2ff; /* Light purple */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -35,6 +39,10 @@
     --fg-default: #F5F6FA;
     --fg-secondary: #CACFDC;
     --border-default: #66708C;
+
+    /* Gradient Animation Colors - Dark */
+    --gradient-start-dark: #1a202c; /* Dark blue-gray */
+    --gradient-end-dark: #2d3748; /* Darker gray */
   }
 }
 
@@ -46,9 +54,45 @@
   --font-mono: var(--font-geist-mono);
 }
 
+@keyframes subtleGradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 body {
   /* Using Axiom page background and default foreground colors */
+  /* Fallback background */
   background: var(--bg-page);
   color: var(--fg-default);
   font-family: Arial, Helvetica, sans-serif; /* Consider using Geist fonts if available/preferred */
+
+  /* Animated Gradient */
+  background: linear-gradient(270deg, var(--gradient-start-light), var(--gradient-end-light));
+  background-size: 200% 200%; /* Make gradient larger than viewport */
+  animation: subtleGradientShift 15s ease infinite;
 }
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: linear-gradient(270deg, var(--gradient-start-dark), var(--gradient-end-dark));
+    background-size: 200% 200%;
+    animation: subtleGradientShift 15s ease infinite;
+  }
+}
+
+/* Custom Animation Delays */
+.animate-delay-200 { animation-delay: 0.2s; }
+.animate-delay-400 { animation-delay: 0.4s; }
+.animate-delay-600 { animation-delay: 0.6s; }
+/* Add more delays as needed */
